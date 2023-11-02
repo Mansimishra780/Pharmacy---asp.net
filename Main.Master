@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="Pharma.main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" StaticSubMenuIndent="10px">
+            <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <DynamicMenuStyle BackColor="#FFFBD6" />
+            <DynamicSelectedStyle BackColor="#FFCC66" />
+            <Items>
+                <asp:MenuItem NavigateUrl="~/CheckStock.aspx" Text="Order History" Value="Check Stock"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Ship.aspx" Text="Ship" Value="Ship"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Inventory.aspx" Text="Inventory" Value="Inventory"></asp:MenuItem>
+            </Items>
+            <StaticHoverStyle BackColor="White" BorderColor="#FF3300" />
+            <StaticMenuItemStyle Font-Bold="True" Font-Size="X-Large" ForeColor="Red" HorizontalPadding="20px" />
+            <StaticSelectedStyle BackColor="#FFCC66" />
+        </asp:Menu>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <asp:Label ID="Label1" runat="server" BorderColor="White" Font-Names="Malgun Gothic Semilight" ForeColor="Black" Text="Welcome to LIVE ON PHARMA!"></asp:Label>
+            </asp:ContentPlaceHolder>
+            <br />
+        </div>
+        <p>
+            <asp:Image ID="Image1" runat="server" Height="541px" ImageUrl="~/images.jpg" Width="1528px" />
+        </p>
+    </form>
+</body>
+</html>
